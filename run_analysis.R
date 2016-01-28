@@ -36,7 +36,7 @@ dataset<-rbind(XTest, XTrain)
 
 ## Extract only the measurements on the mean and standard deviation for each measurement.
 meanStdFeatures<-features$V2[grep("mean\\(\\)|std\\(\\)", features$V2)]
-columnNames=c("subject", "activity", as.character(meanStdFeatures))
+columnNames<-c("subject", "activity", as.character(meanStdFeatures))
 dataset<-subset(dataset, select=columnNames)
 
 ## Use descriptive activity names to name the activities in the data set
